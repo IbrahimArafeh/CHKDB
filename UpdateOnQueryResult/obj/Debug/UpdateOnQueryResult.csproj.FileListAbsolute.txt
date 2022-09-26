@@ -1,0 +1,11 @@
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\bin\Debug\UpdateOnQueryResult.exe.config
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\bin\Debug\UpdateOnQueryResult.exe
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\bin\Debug\UpdateOnQueryResult.pdb
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\obj\Debug\UpdateOnQueryResult.csproj.AssemblyReference.cache
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\obj\Debug\UpdateOnQueryResult.csproj.SuggestedBindingRedirects.cache
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\obj\Debug\UpdateOnQueryResult.Form1.resources
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\obj\Debug\UpdateOnQueryResult.Properties.Resources.resources
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\obj\Debug\UpdateOnQueryResult.csproj.GenerateResource.cache
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\obj\Debug\UpdateOnQueryResult.csproj.CoreCompileInputs.cache
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\obj\Debug\UpdateOnQueryResult.exe
+C:\Project\UpdateOnQueryResult\UpdateOnQueryResult\obj\Debug\UpdateOnQueryResult.pdb
