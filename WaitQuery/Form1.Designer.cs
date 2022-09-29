@@ -48,6 +48,9 @@
             this.txtWaitingMin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.cbRunType = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtRunQuery = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +59,7 @@
             // 
             this.lblMsg.AutoSize = true;
             this.lblMsg.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMsg.Location = new System.Drawing.Point(287, 353);
+            this.lblMsg.Location = new System.Drawing.Point(288, 421);
             this.lblMsg.Name = "lblMsg";
             this.lblMsg.Size = new System.Drawing.Size(142, 25);
             this.lblMsg.TabIndex = 2;
@@ -64,7 +67,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(43, 295);
+            this.button1.Location = new System.Drawing.Point(44, 373);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 39);
             this.button1.TabIndex = 3;
@@ -128,9 +131,9 @@
             this.cb2.Items.AddRange(new object[] {
             "AND",
             "OR"});
-            this.cb2.Location = new System.Drawing.Point(401, 13);
+            this.cb2.Location = new System.Drawing.Point(386, 13);
             this.cb2.Name = "cb2";
-            this.cb2.Size = new System.Drawing.Size(62, 23);
+            this.cb2.Size = new System.Drawing.Size(81, 23);
             this.cb2.TabIndex = 13;
             // 
             // cb1
@@ -140,9 +143,9 @@
             this.cb1.Items.AddRange(new object[] {
             "AND",
             "OR"});
-            this.cb1.Location = new System.Drawing.Point(150, 13);
+            this.cb1.Location = new System.Drawing.Point(142, 13);
             this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(62, 23);
+            this.cb1.Size = new System.Drawing.Size(71, 23);
             this.cb1.TabIndex = 12;
             // 
             // label2
@@ -198,14 +201,14 @@
             // 
             this.lbResult.FormattingEnabled = true;
             this.lbResult.ItemHeight = 15;
-            this.lbResult.Location = new System.Drawing.Point(43, 391);
+            this.lbResult.Location = new System.Drawing.Point(44, 459);
             this.lbResult.Name = "lbResult";
             this.lbResult.Size = new System.Drawing.Size(663, 109);
             this.lbResult.TabIndex = 1;
             // 
             // txtWaitingMin
             // 
-            this.txtWaitingMin.Location = new System.Drawing.Point(302, 304);
+            this.txtWaitingMin.Location = new System.Drawing.Point(288, 382);
             this.txtWaitingMin.Name = "txtWaitingMin";
             this.txtWaitingMin.Size = new System.Drawing.Size(100, 23);
             this.txtWaitingMin.TabIndex = 14;
@@ -213,7 +216,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(224, 307);
+            this.label4.Location = new System.Drawing.Point(210, 385);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 15);
             this.label4.TabIndex = 15;
@@ -222,17 +225,49 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(408, 307);
+            this.label5.Location = new System.Drawing.Point(394, 385);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 15);
             this.label5.TabIndex = 16;
             this.label5.Text = "Milliseconds";
             // 
+            // cbRunType
+            // 
+            this.cbRunType.FormattingEnabled = true;
+            this.cbRunType.Items.AddRange(new object[] {
+            "Query",
+            "Stored Procedure"});
+            this.cbRunType.Location = new System.Drawing.Point(125, 308);
+            this.cbRunType.Name = "cbRunType";
+            this.cbRunType.Size = new System.Drawing.Size(187, 23);
+            this.cbRunType.TabIndex = 17;
+            this.cbRunType.SelectedIndexChanged += new System.EventHandler(this.cbRunType_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(52, 311);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 15);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Run The";
+            // 
+            // txtRunQuery
+            // 
+            this.txtRunQuery.Location = new System.Drawing.Point(335, 303);
+            this.txtRunQuery.Name = "txtRunQuery";
+            this.txtRunQuery.Size = new System.Drawing.Size(370, 61);
+            this.txtRunQuery.TabIndex = 19;
+            this.txtRunQuery.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 512);
+            this.ClientSize = new System.Drawing.Size(751, 590);
+            this.Controls.Add(this.txtRunQuery);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbRunType);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtWaitingMin);
@@ -279,5 +314,8 @@
         private TextBox txtWaitingMin;
         private Label label4;
         private Label label5;
+        private ComboBox cbRunType;
+        private Label label6;
+        private RichTextBox txtRunQuery;
     }
 }
