@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kZmIa5MQSXY7ikLDdjqXACJK4soqpezD7SMZWaEWuLm1nHWD1ljYwuu5511eVKG4OYW5TZ2JISFfAqj2P7qxUw==",
+  "dgSpecHash": "hpb3is16H4uoUZa0uR2RwxEpblhU3CxhttlM1XdDP0Yw3wtMzjsGRitnslPXtQ9hmcNNXpUrLTIGFuLC7lmheg==",
   "success": true,
-  "projectFilePath": "C:\\Project\\WaitQuery\\WaitQuery\\WaitQuery.csproj",
+  "projectFilePath": "C:\\Project\\CHKDB\\WaitQuery\\WaitQuery.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IBA022\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\IBA022\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
