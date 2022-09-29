@@ -3,6 +3,8 @@ using System.Data.SqlClient;
 using System.Drawing.Text;
 using System.Security.Cryptography.X509Certificates;
 using System.DirectoryServices.ActiveDirectory;
+using System.Data;
+using System.Drawing;
 
 namespace WaitQuery
 {
@@ -49,21 +51,34 @@ namespace WaitQuery
 
             async Task SomeLongTask()
             {
-                conn.Open();
-                SqlCommand command = new SqlCommand(txtQueryString.Text, conn);
-
-                using (SqlDataReader reader = command.ExecuteReader())
+                if(cbRunType.SelectedIndex == 1)
                 {
-                    if (reader.Read())
+                    //updatePersonGender
+                    SqlCommand cmd = new SqlCommand(txtSpName.Text, conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    conn.Open();
+                    int rowAffected = cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+                else
+                {
+
+                    SqlCommand command = new SqlCommand(txtQueryString.Text, conn);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        foreach (var i in reader)
+                        if (reader.Read())
                         {
-                            dbValues.Add((int)reader[txtCol1.Text]);
+                            foreach (var i in reader)
+                            {
+                                dbValues.Add((int)reader[txtCol1.Text]);
+                            }
                         }
                     }
+                    conn.Close();
+                    await Task.Delay(Convert.ToInt32(txtWaitingMin));
                 }
-                conn.Close();
-                await Task.Delay(Convert.ToInt32(txtWaitingMin));
             }
 
 
@@ -72,7 +87,7 @@ namespace WaitQuery
         {
             if (string.IsNullOrEmpty(txtQueryString.Text) || string.IsNullOrEmpty(txtCol1.Text) 
                 || string.IsNullOrEmpty(txtVal1.Text) || string.IsNullOrEmpty(txtWaitingMin.Text)
-                || cbRunType.SelectedIndex.Equals(0))
+                || !cbRunType.SelectedIndex.Equals(0) || !cbRunType.SelectedIndex.Equals(1))
             {
                 MessageBox.Show("You have to fill query string, Column name, Values name and Waiting time", "Missing Field", 
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -82,17 +97,20 @@ namespace WaitQuery
         private void init()
         {
             txtRunQuery.Visible = false;
+            txtSpName.Visible = false;
         }
 
         private void cbRunType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbRunType.SelectedIndex == 1)
+            if(cbRunType.SelectedIndex == 0)
             {
                 txtRunQuery.Visible = true;
+                txtSpName.Visible = false;
             }
             if (cbRunType.SelectedIndex == 1)
             {
                 txtRunQuery.Visible = false;
+                txtSpName.Visible = true;
             }
         }
     }
