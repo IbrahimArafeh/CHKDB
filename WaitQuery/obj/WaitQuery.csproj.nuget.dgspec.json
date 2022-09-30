@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\CHKDB\\WaitQuery\\WaitQuery.csproj": {}
+    "C:\\Project\\CHKDB\\WaitQuery\\WaitQuery.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\CHKDB\\WaitQuery\\WaitQuery.csproj": {
+    "C:\\Project\\CHKDB\\WaitQuery\\WaitQuery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\CHKDB\\WaitQuery\\WaitQuery.csproj",
+        "projectUniqueName": "C:\\Project\\CHKDB\\WaitQuery\\WaitQuery.csproj",
         "projectName": "WaitQuery",
-        "projectPath": "C:\\Projects\\CHKDB\\WaitQuery\\WaitQuery.csproj",
-        "packagesPath": "C:\\Users\\I.A\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\CHKDB\\WaitQuery\\obj\\",
+        "projectPath": "C:\\Project\\CHKDB\\WaitQuery\\WaitQuery.csproj",
+        "packagesPath": "C:\\Users\\IBA022\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\CHKDB\\WaitQuery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\I.A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\IBA022\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
